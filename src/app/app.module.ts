@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule }   from '@angular/common/http';
 
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +15,8 @@ import { HttpClientModule }   from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
