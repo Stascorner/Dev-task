@@ -1,15 +1,58 @@
 <section class=sect1-search>
     <div class="container">
-        <input type="search">
-        <button type="button" class="btn btn-primary"
-        tooltip="some description">
-  Search
-</button>
+        <div class="search-box">
+            <input type="search">
+            <button type="button" class="btn btn-primary" tooltip="some description">
+                Search
+            </button>
+        </div>
+        <div>
+            <div class="btn-group" dropdown>
+                <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                Button dropdown <span class="caret"></span>
+                </button>
+                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 <section class="sect2-table">
     <div class="container">
-
+        <!--<form>
+            <div class="form-group form-inline">
+                Full text search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
+            </div>
+        </form>-->
+        
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Page Count</th>
+              <th scope="col">Publish date</th>
+              <th scope="col">Excerpt</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let todo of todos; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ todo.Title }}</td>
+              <td>{{ todo.Description }}</td>
+              <td>{{ todo.PageCount }}</td>
+              <td>{{ todo.PublishDate }}</td>
+              <td>{{ todo.Excerpt }}</td>
+            </tr>
+            </tbody>
+          </table>
     </div>
 </section>
 <section class="sect3-graph">

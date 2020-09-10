@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px 0;
+
+    button {
+        padding: .3rem .7rem;
+    }
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    input{
+        width: 90%;
+        border: 1px solid #999;
+        border-radius: 4px;
+        outline-offset: 0;
+        padding: 0 10px;
+    }
+
+    input[type=search]:focus{
+        border: 1px solid #000;
+        outline: none;
+    }
+
+    
+}
